@@ -3,9 +3,9 @@ import { useState, useRef } from "react";
 import ExperienceCard from "./ExperienceCard.jsx";
 import ProjectCard from "./ProjectCard.jsx";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
-import clickSound from "./assets/click.mp3";
-import closeSound from "./assets/close.mp3";
-import openSound from "./assets/open.mp3";
+import clickSound from "../public/assets/click.mp3";
+import closeSound from "../public/assets/close.mp3";
+import openSound from "../public/assets/open.mp3";
 import "./Profile.css";
 
 function Profile() {

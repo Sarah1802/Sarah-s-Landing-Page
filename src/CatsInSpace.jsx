@@ -1,12 +1,12 @@
-import cat3 from './assets/cat3.png'
-import cat1 from './assets/cat1.png'
-import cat2 from './assets/cat2.png'
-import spaceship from './assets/spaceship.png'
-import aliencat from './assets/aliencat.png'
-import star1 from './assets/star1.png'
-import star2 from './assets/star2.png'
-import star3 from './assets/star3.png'
-import star4 from './assets/star4.png'
+import cat3 from '../public/assets/cat3.png'
+import cat1 from '../public/assets/cat1.png'
+import cat2 from '../public/assets/cat2.png'
+import spaceship from '../public/assets/spaceship.png'
+import aliencat from '../public/assets/aliencat.png'
+import star1 from '../public/assets/star1.png'
+import star2 from '../public/assets/star2.png'
+import star3 from '../public/assets/star3.png'
+import star4 from '../public/assets/star4.png'
 import './CatsInSpace.css';
 
 function CatsInSpace() {
