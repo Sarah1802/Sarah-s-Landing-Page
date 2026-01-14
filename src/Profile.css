@@ -1,142 +1,146 @@
-
 @font-face {
-    font-family: limelight;
-    src: url('./fonts/Limelight-Regular.ttf');
+  font-family: limelight;
+  src: url("./fonts/Limelight-Regular.ttf");
 }
 
 @font-face {
-    font-family: lexendExa;
-    src: url('./fonts/LexendExa-VariableFont_wght.ttf');
+  font-family: lexendExa;
+  src: url("./fonts/LexendExa-VariableFont_wght.ttf");
 }
 
 .navbar-item {
-    flex: 0 1 auto;
-    transition: background-color 0.4s ease-in-out, transform 0.33s ease-in-out;
+  flex: 0 1 auto;
+  transition:
+    background-color 0.4s ease-in-out,
+    transform 0.33s ease-in-out;
 }
 
 .navbar-item.open {
-    background-color: navy;
-    color: white;
+  background-color: navy;
+  color: white;
 }
 
 /* Fade-in */
 .fade-enter {
-    opacity: 0;
-    transform: translateY(10px);
+  opacity: 0;
+  transform: translateY(10px);
 }
 
 .fade-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 300ms ease, transform 300ms ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
 }
 
 /* Fade-out */
 .fade-exit {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 .fade-exit-active {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 300ms ease, transform 300ms ease;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
 }
 
 .navbar-container {
-    padding: 30px 0px ;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  padding: 30px 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .main-content-container {
-    overflow: hidden;
-    transition: max-height 0.8s ease-in-out;
-    max-height: 0px;   /* collapsed */
+  overflow: hidden;
+  transition: max-height 0.8s ease-in-out;
+  max-height: 0px; /* collapsed */
 }
 
 .main-content-container.open {
-    max-height: 400px; 
+  max-height: 400px;
 }
 
-.cards-container{
-    overflow-y: scroll;
-    height: 400px;
+.cards-container {
+  overflow-y: scroll;
+  height: 400px;
 }
 
 .profile-container {
-    color: navy;
-    font-family: lexendExa;
-    font-weight: 200;
-    height: 100%;
-    padding: 40px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    -ms-overflow-style: none;
+  color: navy;
+  font-family: lexendExa;
+  font-weight: 200;
+  height: 100%;
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -ms-overflow-style: none;
 }
 
 .cards-container::-webkit-scrollbar,
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 button {
-    font-family: lexendExa;
-    border: none;
-    color: navy;
-    background-color: white;
-    transition: transform 0.33s ease-in-out;
+  font-family: lexendExa;
+  border: none;
+  color: navy;
+  background-color: white;
+  transition: transform 0.33s ease-in-out;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .navbar-item:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .cards-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .close-button {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .title {
-    text-align: center;
-    font-family: lexendExa;
-    font-size: 50px;
-    font-weight: 900;
+  text-align: center;
+  font-family: lexendExa;
+  font-size: 50px;
+  font-weight: 900;
 }
 
 .about-me {
-    font-size: 20px;
-    text-align: center;
+  font-size: 20px;
+  text-align: center;
 }
 
 .navbar-item {
-    font-size: 17px;
-    padding: 2% 5%;
-    border-radius: 10px;
+  font-size: 17px;
+  padding: 2% 5%;
+  border-radius: 10px;
 }
 
 .card-heading {
-    font-weight: 500;
-    font-size: 20px;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .card-subheading {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .card-content {
-    font-size: 17px;
-
+  font-size: 17px;
 }

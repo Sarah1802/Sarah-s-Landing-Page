@@ -1,9 +1,22 @@
+html,
+body,
+*,
+*::before,
+*::after,
+button,
+a,
+input,
+select,
+textarea {
+  cursor: none !important;
+}
 
 body {
   background-color: white;
   width: 100%;
   height: 100%;
   margin: 0;
+  cursor: none;
 }
 
 .flex-container {
@@ -14,11 +27,9 @@ body {
   gap: 5%;
 }
 
-
 .catsinspace-component {
   flex: 1 1 400px; /* 👈 minimum width */
 }
-
 
 .profile-component {
   flex: 1 600px; /* 👈 minimum width */

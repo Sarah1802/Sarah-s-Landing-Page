@@ -1,5 +1,5 @@
 export const profile = {
-  bio: "I'm a third-year UBC CS student, SDE intern at Global Relay. Thanks for visiting!",
+  bio: "I'm a third-year UBC CS student and a SDE intern at Global Relay. Thanks for visiting!",
   workExperience: [
     {
       company: "Policy Reporter",

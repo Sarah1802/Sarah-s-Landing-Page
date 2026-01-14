@@ -1,0 +1,30 @@
+.cursor {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: navy;
+    opacity: 0.5;
+    transition: 150ms ease-out;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.click {
+    animation: clickAnim .3s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes clickAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
