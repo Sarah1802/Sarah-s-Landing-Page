@@ -1,11 +1,7 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import "./App.css";
 import { useEffect, useRef } from "react";
 import CatsInSpace from "./CatsInSpace.jsx";
 import Profile from "./Profile.jsx";
-import Cursor from "./Cursor.jsx";
 import './Cursor.css';
 
 function App() {
