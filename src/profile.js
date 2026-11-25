@@ -1,101 +1,93 @@
 export const profile = {
-  bio: "I'm a third-year UBC CS student and a SDE intern at Global Relay. Thanks for visiting!",
+  name: "Sarah",
+  typingLines: [
+    "I like to color buttons",
+    "I like to play indie guitar",
+    "I need more sleep",
+  ],
+  bio: "I'm a 4th year Computer Science student at UBC. Previously, I worked at Global Relay, and I'm currently a Junior SDE at Policy Reporter. Feel free to reach out :).",
+  links: [{ label: "LinkedIn", href: "https://linkedin.com/in/sliu182" }],
+  education: {
+    school: "University of British Columbia",
+    degree: "B.Sc. Computer Science",
+    date: "Expected May 2028",
+    points: [
+      "GPA: 4.0, Dean's Honour List",
+      "Coursework: Algorithms & Data Structures, Operating Systems, Relational Databases, Computer Graphics, Computer Networking",
+    ],
+  },
+  skills: {
+    Languages: ["Python", "Go", "JavaScript", "TypeScript", "PHP", "C", "C++", "Java", "R", "SQL"],
+    Technologies: ["React", "AWS", "Docker", "Splunk", "MySQL", "HTML", "CSS"],
+  },
   workExperience: [
     {
-      company: "Policy Reporter",
+      org: "Global Relay",
       role: "Software Developer Intern",
-      date: "May 2025 - Dec 2025",
+      date: "Jan 2026 - Aug 2026",
+      tech: "React, TypeScript",
       points: [
-        {
-          id: 0,
-          description:
-            "Developed and maintained web scraping scripts (Selenium, Colly, Puppeteer) to extract drug policy, formulary, and fee schedule data from payer websites, reducing delivery time for client healthcare policy tracking by 50%.",
-        },
-        {
-          id: 1,
-          description:
-            "Optimized Go-based web scrapers by introducing goroutine parallelism and thread-safe synchronization via the sync library, improving data throughput and reducing runtime by 200%.",
-        },
-        {
-          id: 2,
-          description:
-            "Contributed to full-stack development on the Sustainability team, fixing frontend UI alignment issues, improving form validation feedback, and resolving backend data validation errors.",
-        },
-        {
-          id: 3,
-          description:
-            "Added automated tests to React frontend (Jest, Enzyme) and PHP backend (PHPUnit, Prophecy), improving code reliability and supporting CI/CD for a live production system.",
-        },
+        "Established a cross-framework routing infrastructure to support the ongoing frontend Sencha-to-React migration.",
+        "Improved data-loading performance by implementing RTK Query endpoints with built-in caching.",
+        "Implemented 10+ UI/UX designs as interactive frontend features using React, React Transition Group and CSS.",
+        "Enabled new UI motion features by building a reusable animation utility with custom easing and built-in presets.",
+      ],
+    },
+    {
+      org: "Policy Reporter",
+      role: "Software Developer Intern",
+      date: "May 2025 - Present",
+      tech: "Go, TypeScript, Python, PHP, React, SQL",
+      points: [
+        "Reduced client policy-tracking delivery time by 50% using Selenium and GoColly web scrapers.",
+        "Accelerated Go-based web scrapers by 1,200x by parallelizing data collection with goroutines and synchronization.",
+        "Developed SQL database migration scripts with transactional safeguards to ensure reliable schema/data updates.",
+        "Implemented PHP output escaping and strengthened data validation to mitigate Stored XSS vulnerabilities.",
       ],
     },
   ],
   leadershipExperience: [
     {
-      club: "UBC Women in Computer Science",
+      org: "UBC Women in Computer Science",
       role: "Conference Lead",
-      date: "Jun. 2025 - Present",
+      date: "Jun 2025 - Present",
       points: [
-        {
-          id: 0,
-          description:
-            "Led the planning and execution of the TechForward Conference, managing budgeting, logistics, and cross-team coordination to deliver a successful event.",
-        },
-        {
-          id: 1,
-          description:
-            "Secured and managed sponsor partnerships, overseeing deliverables such as branding, talks, and booths.",
-        },
-        {
-          id: 2,
-          description:
-            "Coordinated WiCS’s participation in CAN-CWiC West, collaborating with SFU and UBC teams on outreach and event planning.",
-        },
+        "Increased conference funding by 77% through sponsor partnerships and grant applications.",
+        "Increased event attendance by 20% through cross-club collaboration and targeted student outreach.",
+        "Managed sponsor relationships and deliverables, including branding, speaker sessions, and exhibition booths.",
+        "Led TECHforward Conference planning, overseeing event logistics and coordinating cross-team outreach.",
       ],
     },
   ],
   projects: [
     {
-      name: "UBC Insights",
+      name: "Mise",
+      tech: "React, Supabase, TypeScript, CSS",
       description:
-        "A web-based tool that allows users to upload UBC course datasets and perform custom queries to retrieve statistics such as course averages, pass/fail counts, and enrollment details.",
+        "A full-stack meal-planning app covering recipes, weekly meal plans, pantry tracking, grocery lists, receipts and spending.",
       points: [
-        {
-          id: 0,
-          description:
-            "Leveraged Chart.js to render graphs, visualizing trends in course averages, pass/fail rates, and yearly enrollment patterns.",
-        },
-        {
-          id: 1,
-          description:
-            "Utilized TDD with Mocha and Chai to validate a RESTful backend that handles dataset processing with asynchronous parsing of large zip files and efficient storage of structured data.",
-        },
+        "Designed a PostgreSQL database architecture with version-controlled SQL migrations and row-level security (RLS) policies to enforce user-level data isolation.",
+        "Integrated the Claude API via Supabase Edge Functions to generate personalized recipes from customizable prompts.",
+      ],
+    },
+    {
+      name: "UBC Insights",
+      tech: "Chart.js, Mocha, Chai",
+      description:
+        "A web tool for uploading UBC course datasets and running custom queries for stats like course averages, pass/fail counts, and enrollment.",
+      points: [
+        "Leveraged Chart.js to visualize trends in course averages, pass/fail rates, and yearly enrollment.",
+        "Used TDD with Mocha and Chai to validate a RESTful backend that asynchronously parses large zip files and stores structured data.",
       ],
     },
     {
       name: "League of Legends Stats Tracker",
+      tech: "SQL",
       description:
-        "A web application to analyze win rates of champions, builds and players and track friend duo statistics for LOL players.",
+        "A web app to analyze champion, build and player win rates and track duo statistics with friends.",
       points: [
-        {
-          id: 0,
-          description:
-            "Designed and implemented a relational database from scratch, including a detailed ER diagram with elements like entities, relationships, weak entities, and ISA relationships.",
-        },
-        {
-          id: 1,
-          description:
-            "Developed and normalized database schemas to ensure data integrity and optimize query performance.",
-        },
-        {
-          id: 2,
-          description:
-            "Implemented advanced SQL queries with sanitization, and operations like division and nested aggregation.",
-        },
-        {
-          id: 3,
-          description:
-            "Created a comprehensive SQL script to initialize the database, including table creation, constraints, foreign keys, and data population.",
-        },
+        "Designed a relational database from scratch, including an ER diagram with weak entities and ISA relationships.",
+        "Normalized schemas for data integrity and wrote advanced, sanitized SQL queries using division and nested aggregation.",
       ],
     },
   ],

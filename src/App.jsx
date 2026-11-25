@@ -1,65 +1,46 @@
 import "./App.css";
+import "./Cursor.css";
 import { useEffect, useRef } from "react";
-import CatsInSpace from "./CatsInSpace.jsx";
+import Intro from "./Intro.jsx";
 import Profile from "./Profile.jsx";
-import './Cursor.css';
 
 function App() {
   const cursorRef = useRef(null);
 
   useEffect(() => {
+    const cursor = cursorRef.current;
+    if (!cursor) return;
+
     const onMove = (e) => {
-      console.log(e.clientX, e.clientY);
-
-      const cursorElement = cursorRef.current;
-      if (!cursorElement) return;
-
-      cursorElement.style.top = `${e.pageY - 15}px`;
-      cursorElement.style.left = `${e.pageX - 15}px`;
+      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      // Delegated hover check so it works for elements mounted later too
+      cursor.classList.toggle("hover", !!e.target.closest("button, a"));
     };
-
-    const onClick = (e) => {
-      const cursorElement = cursorRef.current;
-      console.log("here");
-      if (!cursorElement) return;
-
-      cursorElement.classList.add("click");
-
-      setTimeout(() => {
-        cursorElement.classList.remove("click");
-
-      }, 500);
-    }
-    
-    document.querySelectorAll("button, a").forEach(el => {
-      el.addEventListener("mouseenter", () =>
-        cursorRef.current.classList.add("hover")
-      );
-      el.addEventListener("mouseleave", () =>
-        cursorRef.current.classList.remove("hover")
-      );
-    });
+    const onDown = () => cursor.classList.add("click");
+    const onUp = () => cursor.classList.remove("click");
 
     document.addEventListener("mousemove", onMove);
-    document.addEventListener("click", onClick);
-    return () => document.removeEventListener("mousemove", onMove);
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("mouseup", onUp);
+    return () => {
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("mouseup", onUp);
+    };
   }, []);
-
 
   return (
     <>
-      <div className='cursor' ref={cursorRef}>
+      <div className="cursor" ref={cursorRef}>
+        <div className="cursor-dot" />
       </div>
 
-      <div className="flex-container">
-        <div className="profile-component">
-          <Profile />
-        </div>
-        <div className="catsinspace-component">
-          <CatsInSpace />
-        </div>
-      </div>
+      <main className="layout">
+        <Intro />
+        <Profile />
+      </main>
     </>
   );
 }
+
 export default App;

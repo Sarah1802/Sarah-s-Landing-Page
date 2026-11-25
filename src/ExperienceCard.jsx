@@ -1,21 +1,20 @@
-function ExperienceCard({ experience, experienceType }) {
-  const bulletPoints = experience.points.map((p) => {
-    return <li key={p.id}>{p.description}</li>;
-  });
-
+function ExperienceCard({ experience }) {
   return (
-    <div>
-      <div className="position-date">
-        <div className="position card-heading">{experience.role}</div>
-        <div className="date card-subheading">{experience.date}</div>
+    <article className="card">
+      <div className="card-top">
+        <h3 className="card-heading">{experience.org}</h3>
+        <span className="card-date">{experience.date}</span>
       </div>
-      <div className="company-club card-subheading">
-        {experienceType == "work" ? experience.company : experience.club}
+      <div className="card-subheading">
+        {experience.role}
+        {experience.tech && <span className="card-tech"> · {experience.tech}</span>}
       </div>
-      <div className="card-content">
-        <ul>{bulletPoints}</ul>
-      </div>
-    </div>
+      <ul className="card-points">
+        {experience.points.map((p) => (
+          <li key={p}>{p}</li>
+        ))}
+      </ul>
+    </article>
   );
 }
 

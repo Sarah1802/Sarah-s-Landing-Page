@@ -1,18 +1,15 @@
 function ProjectCard({ project }) {
-  const bulletPoints = project.points.map((point) => {
-    return <li key={point.id}>{point.description}</li>;
-  });
-
   return (
-    <div>
-      <div className="project-name card-heading">{project.name}</div>
-      <div className="project-description card-subheading">
-        {project.description}
-      </div>
-      <div className="project-points card-content">
-        <ul>{bulletPoints}</ul>
-      </div>
-    </div>
+    <article className="card">
+      <h3 className="card-heading">{project.name}</h3>
+      <div className="card-subheading card-tech">{project.tech}</div>
+      <p className="card-description">{project.description}</p>
+      <ul className="card-points">
+        {project.points.map((p) => (
+          <li key={p}>{p}</li>
+        ))}
+      </ul>
+    </article>
   );
 }
 
